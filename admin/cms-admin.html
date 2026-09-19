@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS Admin - Website BQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        /* LOGIN PAGE */
+        .login-page {
+            display: none;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+            padding: 20px;
+        }
+
+        .login-page.show {
+            display: flex;
+        }
+
+        .login-box {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-box h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #1b5e20;
+            text-align: center;
+        }
+
+        .login-box p {
+            text-align: center;
+            color: #999;
+            font-size: 13px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #1b5e20;
+            box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.1);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background: #1b5e20;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-login:hover {
+            background: #1a5318;
+        }
+
+        .error-msg {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: none;
+            font-size: 13px;
+        }
+
+        .error-msg.show {
+            display: block;
+        }
+
+        /* CMS PAGE */
+        .cms-page {
+            display: none;
+        }
+
+        .cms-page.show {
+            display: block;
+        }
+
+        .cms-header {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cms-header h1 {
+            color: #1b5e20;
+            font-size: 24px;
+        }
+
+        .cms-header-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #1b5e20;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1a5318;
+        }
+
+        .btn-secondary {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #d0d0d0;
+        }
+
+        .btn-success {
+            background: #4caf50;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #45a049;
+        }
+
+        .cms-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* PAGES LIST */
+        .pages-sidebar {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+
+        .pages-sidebar h3 {
+            padding: 15px;
+            background: #f5f5f5;
+            font-size: 14px;
+            color: #666;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .pages-list {
+            list-style: none;
+        }
+
+        .pages-list li {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .pages-list button {
+            width: 100%;
+            padding: 12px 15px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            text-align: left;
+            font-size: 14px;
+            color: #333;
+            transition: all 0.3s;
+        }
+
+        .pages-list button:hover {
+            background: #f5f5f5;
+        }
+
+        .pages-list button.active {
+            background: #e8f5e9;
+            color: #1b5e20;
+            font-weight: 600;
+            border-left: 3px solid #1b5e20;
+        }
+
+        /* EDITOR SECTION */
+        .editor-section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 30px;
+            display: none;
+        }
+
+        .editor-section.show {
+            display: block;
+        }
+
+        .editor-header {
+            margin-bottom: 25px;
+            border-bottom: 2px solid #f5f5f5;
+            padding-bottom: 15px;
+        }
+
+        .editor-header h2 {
+            color: #1b5e20;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .editor-header p {
+            color: #999;
+            font-size: 13px;
+        }
+
+        /* TOOLBAR */
+        .editor-toolbar {
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 10px;
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .toolbar-btn {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+
+        .toolbar-btn:hover {
+            background: #e8f5e9;
+            border-color: #1b5e20;
+        }
+
+        .toolbar-sep {
+            width: 1px;
+            background: #e0e0e0;
+            margin: 0 5px;
+        }
+
+        /* EDITOR FORM */
+        .form-field {
+            margin-bottom: 20px;
+        }
+
+        .form-field label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .form-field input[type="text"],
+        .form-field input[type="email"],
+        .form-field textarea,
+        .form-field select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        .form-field textarea {
+            min-height: 300px;
+            resize: vertical;
+            font-family: 'Courier New', monospace;
+        }
+
+        .form-field input:focus,
+        .form-field textarea:focus,
+        .form-field select:focus {
+            outline: none;
+            border-color: #1b5e20;
+            box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.1);
+        }
+
+        /* IMAGE UPLOAD */
+        .image-upload-area {
+            border: 2px dashed #ddd;
+            border-radius: 6px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: #f9f9f9;
+        }
+
+        .image-upload-area:hover {
+            border-color: #1b5e20;
+            background: #f0f8f5;
+        }
+
+        .image-upload-area.dragover {
+            border-color: #1b5e20;
+            background: #e8f5e9;
+        }
+
+        .image-upload-icon {
+            font-size: 32px;
+            color: #1b5e20;
+            margin-bottom: 10px;
+        }
+
+        .image-upload-text {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .image-upload-text strong {
+            color: #1b5e20;
+        }
+
+        .image-preview {
+            margin-top: 15px;
+        }
+
+        .image-preview img {
+            max-width: 200px;
+            max-height: 200px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+        }
+
+        /* FORM ACTIONS */
+        .form-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #f5f5f5;
+        }
+
+        .form-actions .btn {
+            flex: 1;
+        }
+
+        /* STATUS */
+        .status-bar {
+            background: #e8f5e9;
+            color: #1b5e20;
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: none;
+            font-size: 13px;
+        }
+
+        .status-bar.show {
+            display: block;
+        }
+
+        .status-bar.error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        /* LAYOUT */
+        .cms-content {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .cms-content {
+                grid-template-columns: 1fr;
+            }
+
+            .pages-sidebar {
+                position: static;
+            }
+
+            .cms-header {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+
+            .cms-header-actions {
+                width: 100%;
+            }
+
+            .cms-header-actions .btn {
+                flex: 1;
+            }
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #1b5e20;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<div class="login-page show" id="loginPage">
+    <div class="login-box">
+        <h1>✨ CMS Admin</h1>
+        <p>Website BQ Content Management</p>
+        <div class="error-msg" id="loginError"></div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="loginEmail" placeholder="Masukkan email Anda">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="loginPassword" placeholder="Masukkan password">
+        </div>
+        <button class="btn-login" onclick="handleLogin()">Login</button>
+    </div>
+</div>
+
+<!-- CMS PAGE -->
+<div class="cms-page" id="cmsPage">
+    <div class="cms-header">
+        <h1>📝 CMS Admin - Website BQ</h1>
+        <div class="cms-header-actions">
+            <button class="btn btn-secondary" onclick="handleLogout()">Logout</button>
+        </div>
+    </div>
+
+    <div class="cms-container">
+        <div class="cms-content">
+            <!-- SIDEBAR -->
+            <div class="pages-sidebar">
+                <h3>📄 Halaman</h3>
+                <ul class="pages-list" id="pagesList"></ul>
+            </div>
+
+            <!-- EDITOR -->
+            <div>
+                <div class="status-bar" id="statusBar"></div>
+                <div class="editor-section" id="editorSection"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
+
+<script>
+// FIREBASE CONFIG - GANTI DENGAN CONFIG ANDA
+var firebaseConfig = {
+  apiKey: "AIzaSyDDRyX8wGf-D5jSB0GBhp54R8kRIY7v3RA",
+  projectId: "website-baitual-quran",
+  authDomain: "website-baitual-quran.firebaseapp.com",
+  storageBucket: "website-baitual-quran.firebasestorage.app",
+};
+
+firebase.initializeApp(firebaseConfig);
+var auth = firebase.auth();
+var db = firebase.firestore();
+var storage = firebase.storage();
+
+// STATE
+var currentUser = null;
+var currentPageId = null;
+var pagesData = {
+    'index': {
+        title: 'Halaman Utama',
+        sections: [
+            { id: 'hero-title', label: 'Judul Hero', type: 'text' },
+            { id: 'hero-desc', label: 'Deskripsi Hero', type: 'textarea' },
+            { id: 'about-title', label: 'Judul Tentang Kami', type: 'text' },
+            { id: 'about-desc', label: 'Deskripsi Tentang Kami', type: 'textarea' },
+        ]
+    },
+    'gelombang-pendaftaran': {
+        title: 'Gelombang Pendaftaran',
+        sections: [
+            { id: 'page-title', label: 'Judul Halaman', type: 'text' },
+            { id: 'page-desc', label: 'Deskripsi', type: 'textarea' },
+        ]
+    },
+    'kehidupan-pondok': {
+        title: 'Kehidupan Pondok',
+        sections: [
+            { id: 'page-title', label: 'Judul Halaman', type: 'text' },
+            { id: 'page-content', label: 'Konten', type: 'textarea' },
+        ]
+    },
+    'kehidupan-rumah-quran': {
+        title: 'Kehidupan Rumah Qur\'an',
+        sections: [
+            { id: 'page-title', label: 'Judul', type: 'text' },
+            { id: 'page-content', label: 'Konten', type: 'textarea' },
+        ]
+    },
+    'gelombang-syamil-madani': {
+        title: 'Gelombang Syamil Madani',
+        sections: [
+            { id: 'page-title', label: 'Judul', type: 'text' },
+            { id: 'page-desc', label: 'Deskripsi', type: 'textarea' },
+        ]
+    }
+};
+
+// LOGIN
+function handleLogin() {
+    var email = document.getElementById('loginEmail').value.trim();
+    var password = document.getElementById('loginPassword').value;
+
+    if (!email || !password) {
+        showLoginError('Email dan password harus diisi');
+        return;
+    }
+
+    var btn = event.target;
+    btn.disabled = true;
+    btn.textContent = 'Sedang login...';
+
+    auth.signInWithEmailAndPassword(email, password)
+        .then(function(userCredential) {
+            currentUser = userCredential.user;
+            showCMS();
+            initializePages();
+            btn.disabled = false;
+            btn.textContent = 'Login';
+        })
+        .catch(function(error) {
+            var errorMsg = 'Login gagal';
+            if (error.code === 'auth/user-not-found') errorMsg = 'Email tidak terdaftar';
+            if (error.code === 'auth/wrong-password') errorMsg = 'Password salah';
+            if (error.code === 'auth/invalid-email') errorMsg = 'Email tidak valid';
+            showLoginError(errorMsg);
+            btn.disabled = false;
+            btn.textContent = 'Login';
+        });
+}
+
+function showLoginError(msg) {
+    var errorEl = document.getElementById('loginError');
+    errorEl.textContent = msg;
+    errorEl.classList.add('show');
+    setTimeout(function() {
+        errorEl.classList.remove('show');
+    }, 3000);
+}
+
+function showCMS() {
+    document.getElementById('loginPage').classList.remove('show');
+    document.getElementById('cmsPage').classList.add('show');
+}
+
+function handleLogout() {
+    if (confirm('Yakin ingin logout?')) {
+        auth.signOut().then(function() {
+            currentUser = null;
+            document.getElementById('loginEmail').value = '';
+            document.getElementById('loginPassword').value = '';
+            document.getElementById('loginPage').classList.add('show');
+            document.getElementById('cmsPage').classList.remove('show');
+        });
+    }
+}
+
+// INITIALIZE PAGES
+function initializePages() {
+    var pagesList = document.getElementById('pagesList');
+    pagesList.innerHTML = '';
+
+    Object.keys(pagesData).forEach(function(pageId) {
+        var page = pagesData[pageId];
+        var li = document.createElement('li');
+        var btn = document.createElement('button');
+        btn.textContent = page.title;
+        btn.onclick = function() { loadPage(pageId); };
+        li.appendChild(btn);
+        pagesList.appendChild(li);
+    });
+
+    // Load first page
+    if (Object.keys(pagesData).length > 0) {
+        loadPage(Object.keys(pagesData)[0]);
+    }
+}
+
+// LOAD PAGE
+function loadPage(pageId) {
+    currentPageId = pageId;
+    var page = pagesData[pageId];
+
+    // Update active button
+    document.querySelectorAll('.pages-list button').forEach(function(btn) {
+        btn.classList.remove('active');
+    });
+    event.target.classList.add('active');
+
+    // Load page data from Firestore
+    db.collection('pages').doc(pageId).get()
+        .then(function(doc) {
+            var pageContent = doc.exists ? doc.data() : {};
+            renderEditor(pageId, page, pageContent);
+        })
+        .catch(function(error) {
+            console.error('Error loading page:', error);
+            showStatus('Error loading page', 'error');
+        });
+}
+
+// RENDER EDITOR
+function renderEditor(pageId, page, pageContent) {
+    var editorSection = document.getElementById('editorSection');
+    var html = '<div class="editor-header">' +
+        '<h2>' + page.title + '</h2>' +
+        '<p>Edit konten halaman ' + page.title + '</p>' +
+        '</div>';
+
+    html += '<div class="editor-toolbar">' +
+        '<button class="toolbar-btn" onclick="formatText(\'bold\')"><strong>B</strong></button>' +
+        '<button class="toolbar-btn" onclick="formatText(\'italic\')"><em>I</em></button>' +
+        '<button class="toolbar-btn" onclick="formatText(\'underline\')"><u>U</u></button>' +
+        '<div class="toolbar-sep"></div>' +
+        '<button class="toolbar-btn" onclick="insertLink()">🔗 Link</button>' +
+        '<button class="toolbar-btn" onclick="insertImage()">🖼️ Image</button>' +
+        '</div>';
+
+    html += '<form onsubmit="return false;">';
+
+    page.sections.forEach(function(section) {
+        var value = pageContent[section.id] || '';
+        html += '<div class="form-field">';
+        html += '<label>' + section.label + '</label>';
+
+        if (section.type === 'textarea') {
+            html += '<textarea id="field-' + section.id + '" placeholder="Tulis konten di sini...">' + value + '</textarea>';
+        } else {
+            html += '<input type="text" id="field-' + section.id + '" placeholder="Tulis di sini..." value="' + value + '">';
+        }
+
+        html += '</div>';
+    });
+
+    html += '<div class="form-field">';
+    html += '<label>Status</label>';
+    var status = pageContent.status || 'draft';
+    html += '<select id="pageStatus">' +
+        '<option value="draft" ' + (status === 'draft' ? 'selected' : '') + '>Draft</option>' +
+        '<option value="published" ' + (status === 'published' ? 'selected' : '') + '>Published</option>' +
+        '</select>';
+    html += '</div>';
+
+    html += '<div class="form-actions">' +
+        '<button class="btn btn-secondary" onclick="cancelEdit()">Batal</button>' +
+        '<button class="btn btn-primary" onclick="savePage(\'' + pageId + '\')">💾 Simpan Perubahan</button>' +
+        '</div>' +
+        '</form>';
+
+    editorSection.innerHTML = html;
+    editorSection.classList.add('show');
+}
+
+function savePage(pageId) {
+    var page = pagesData[pageId];
+    var pageData = {};
+
+    page.sections.forEach(function(section) {
+        var value = document.getElementById('field-' + section.id).value;
+        pageData[section.id] = value;
+    });
+
+    pageData.status = document.getElementById('pageStatus').value;
+    pageData.lastUpdated = new Date();
+    pageData.updatedBy = currentUser.email;
+
+    var saveBtn = event.target;
+    saveBtn.disabled = true;
+    saveBtn.textContent = '💾 Sedang menyimpan...';
+
+    db.collection('pages').doc(pageId).set(pageData)
+        .then(function() {
+            showStatus('Halaman berhasil disimpan!', 'success');
+            saveBtn.disabled = false;
+            saveBtn.textContent = '💾 Simpan Perubahan';
+        })
+        .catch(function(error) {
+            console.error('Error:', error);
+            showStatus('Error menyimpan halaman', 'error');
+            saveBtn.disabled = false;
+            saveBtn.textContent = '💾 Simpan Perubahan';
+        });
+}
+
+function cancelEdit() {
+    if (currentPageId) {
+        loadPage(currentPageId);
+    }
+}
+
+function showStatus(msg, type) {
+    var statusBar = document.getElementById('statusBar');
+    statusBar.textContent = msg;
+    statusBar.classList.add('show');
+    if (type === 'error') {
+        statusBar.classList.add('error');
+    } else {
+        statusBar.classList.remove('error');
+    }
+    setTimeout(function() {
+        statusBar.classList.remove('show');
+    }, 3000);
+}
+
+// TEXT FORMATTING
+function formatText(cmd) {
+    document.execCommand(cmd, false, null);
+}
+
+function insertLink() {
+    var url = prompt('Masukkan URL:');
+    if (url) {
+        document.execCommand('createLink', false, url);
+    }
+}
+
+function insertImage() {
+    alert('Fitur upload image akan ditambahkan segera');
+}
+
+// AUTH STATE
+auth.onAuthStateChanged(function(user) {
+    if (user) {
+        currentUser = user;
+        showCMS();
+        initializePages();
+    } else {
+        document.getElementById('loginPage').classList.add('show');
+        document.getElementById('cmsPage').classList.remove('show');
+    }
+});
+</script>
+
+</body>
+</html>
