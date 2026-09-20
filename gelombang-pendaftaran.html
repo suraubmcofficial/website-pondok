@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gelombang Pendaftaran — Pondok Lumbung Qur'an</title>
+<meta name="description" content="Info gelombang, jadwal, dan syarat pendaftaran santri baru Pondok Lumbung Qur'an.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --parchment:#F8F3E4;
+    --parchment-deep:#EFE7CC;
+    --cream-card:#FFFDF6;
+    --white:#FFFFFF;
+    --ivory:#FBFAF3;
+    --toska:#14A79A;
+    --toska-deep:#0E8177;
+    --ink:#20240B;
+    --ink-soft:#5C5A47;
+
+    /* Teal palette (from index.html for navbar) */
+    --teal-900:#123D26;
+    --teal-700:#1B6B41;
+    --teal-500:#2E8F55;
+    --forest-950:#0A2818;
+
+    /* Amber palette (from index.html for navbar) */
+    --amber-700:#A9711F;
+    --amber-500:#C08A28;
+    --amber-300:#E4BE7C;
+
+    /* Palette derived directly from the Lumbung Qur'an logo */
+    --green-900:#0A3B1F;
+    --green-700:#136A2F;
+    --green-500:#1E8A44;
+    --green-tint:#E4F1E7;
+
+    --gold-800:#7A5E1D;
+    --gold-600:#AE8B26;
+    --gold-400:#C9A227;
+    --gold-tint:#F6EDD3;
+    --gold:#B8862F;
+    --bronze:#8C6A22;
+
+    --line:#E7E1CD;
+    --radius-lg:24px;
+    --radius-md:16px;
+    --shadow-card:0 18px 40px -26px rgba(10,59,31,0.25);
+    --shadow-soft:0 20px 45px -25px rgba(18,61,38,0.35);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:#FFFFFF;
+    color:var(--ink);
+    font-family:'Plus Jakarta Sans', sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ font-family:'Amiri', serif; font-weight:700; color:var(--green-900); margin:0; }
+  p{margin:0;}
+  a{text-decoration:none; color:inherit;}
+  ul{margin:0; padding:0; list-style:none;}
+  button{font-family:inherit; cursor:pointer;}
+
+  .container{ width:100%; max-width:880px; margin:0 auto; padding:0 28px; }
+
+  .gradient-text{
+    background:linear-gradient(90deg, var(--green-700), var(--gold-600));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:#FFFFFF;
+    border-bottom:1px solid #E7E1CD;
+    padding:0;
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 0;
+    gap:40px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    flex-shrink:0;
+    min-width:0;
+  }
+  .brand-mark-wrap{
+    width:40px;
+    height:40px;
+    flex-shrink:0;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:3px;
+    box-shadow:0 1px 3px rgba(0,0,0,0.12);
+  }
+  .brand-mark{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+  }
+  .brand-text{
+    font-family:'Amiri', serif;
+    font-weight:700;
+    font-size:17px;
+    color:#0A2C26;
+    line-height:1.1;
+    letter-spacing:-0.3px;
+  }
+  .brand-text span{
+    display:block;
+    font-family:'Plus Jakarta Sans', sans-serif;
+    font-weight:600;
+    font-size:8.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:#A9711F;
+    margin-top:1px;
+  }
+  .nav-links{
+    display:none;
+    flex:1;
+    gap:32px;
+    font-weight:600;
+    font-size:13.5px;
+    color:#1C2D2A;
+    align-items:center;
+    margin:0;
+  }
+  @media(min-width:980px){
+    .nav-links{display:flex;}
+  }
+  .nav-links a{
+    position:relative;
+    padding:6px 0;
+    white-space:nowrap;
+    transition:color .2s ease;
+    text-decoration:none;
+  }
+  .nav-links a:hover{
+    color:#063D35;
+  }
+  .nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-2px;
+    width:0;
+    height:2px;
+    background:#C08A28;
+    transition:width .25s ease;
+  }
+  .nav-links a:hover::after{
+    width:100%;
+  }
+  .nav-item{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+  }
+  .nav-trigger{
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    padding:6px 0;
+    cursor:pointer;
+    font-weight:600;
+    font-size:13.5px;
+    color:#1C2D2A;
+    background:none;
+    border:none;
+    transition:color .2s ease;
+  }
+  .nav-trigger:hover{
+    color:#063D35;
+  }
+  .nav-trigger .chev{
+    width:11px;
+    height:6px;
+    transition:transform .25s ease;
+    flex-shrink:0;
+  }
+  .nav-item:hover .nav-trigger .chev,
+  .nav-item:focus-within .nav-trigger .chev{
+    transform:rotate(180deg);
+  }
+  .nav-dropdown{
+    position:absolute;
+    top:calc(100% + 10px);
+    left:50%;
+    transform:translateX(-50%) translateY(4px);
+    min-width:220px;
+    background:#FFFFFF;
+    border:1px solid #E7E1CD;
+    border-radius:11px;
+    box-shadow:0 8px 24px -6px rgba(0,0,0,0.12);
+    padding:7px;
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transition:opacity .2s ease, transform .2s ease, visibility .2s ease;
+    z-index:60;
+  }
+  .nav-item:hover .nav-dropdown,
+  .nav-item:focus-within .nav-dropdown{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform:translateX(-50%) translateY(0);
+  }
+  .nav-dropdown a{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    padding:9px 11px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:600;
+    color:#1C2D2A;
+    transition:background .2s ease, color .2s ease;
+    text-decoration:none;
+  }
+  .nav-dropdown a:hover{
+    background:#F3FAF6;
+    color:#063D35;
+  }
+  .nav-dropdown a::after{
+    content:none;
+  }
+  .nav-dropdown .dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    flex-shrink:0;
+  }
+  .nav-right{
+    display:none;
+    align-items:center;
+    gap:18px;
+    flex-shrink:0;
+  }
+  @media(min-width:980px){
+    .nav-right{display:flex;}
+  }
+  .nav-plain{
+    font-weight:600;
+    font-size:13.5px;
+    color:#1C2D2A;
+    white-space:nowrap;
+    transition:color .2s ease;
+    text-decoration:none;
+  }
+  .nav-plain:hover{
+    color:#063D35;
+  }
+  .menu-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:34px;
+    height:34px;
+    border-radius:8px;
+    color:#1C2D2A;
+    flex-shrink:0;
+    background:none;
+    border:none;
+    padding:0;
+    cursor:pointer;
+    transition:background .2s ease;
+  }
+  .menu-btn:hover{
+    background:#F3FAF6;
+  }
+  @media(min-width:980px){
+    .menu-btn{display:none;}
+  }
+  #mobileNav{
+    display:none;
+    flex-direction:column;
+    gap:0;
+    padding:0;
+    border-top:1px solid #E7E1CD;
+    margin-top:0;
+  }
+  #mobileNav.open{
+    display:flex;
+    padding:12px 0;
+  }
+  .mobile-link{
+    display:block;
+    padding:10px 0;
+    font-size:13.5px;
+    font-weight:600;
+    color:#1C2D2A;
+    border-radius:0;
+    transition:color .2s ease;
+    text-decoration:none;
+  }
+  .mobile-link:hover{
+    color:#063D35;
+  }
+    /* ---------- top section ---------- */
+  .top-section{ padding:52px 0 8px; }
+  .badges-row{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px; margin-bottom:14px; }
+  .pill{
+    display:inline-flex; align-items:center; gap:7px;
+    font-size:12px; font-weight:700; letter-spacing:.04em;
+    padding:7px 14px; border-radius:999px;
+  }
+  .pill-outline{ border:1px solid var(--line); color:var(--ink-soft); }
+  .pill-outline .dot{ width:6px; height:6px; border-radius:50%; background:var(--gold-600); }
+  .pill-solid-gold{ background:var(--gold-600); color:#fff; }
+  .pill-solid-green{ background:var(--green-700); color:#fff; }
+  .pill-group{ display:flex; gap:10px; flex-wrap:wrap; }
+
+  .top-section h1{ font-size:clamp(26px,3.6vw,36px); line-height:1.25; }
+  .top-section p.lead{ margin-top:10px; color:var(--ink-soft); font-size:15.5px; max-width:560px; }
+
+  /* ---------- alur pendaftaran ---------- */
+  .flow-section{ padding:40px 0 8px; }
+  .flow-head{ text-align:center; max-width:560px; margin:0 auto 32px; }
+  .flow-head .eyebrow{
+    display:block; font-size:11.5px; font-weight:800; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--green-700); margin-bottom:8px;
+  }
+  .flow-head h2{ font-size:clamp(22px,3vw,28px); }
+  .flow-list{ display:grid; gap:14px; max-width:640px; margin:0 auto; }
+  .flow-step{
+    display:flex; align-items:flex-start; gap:16px;
+    background:#FFFFFF;
+    border:1px solid var(--line);
+    border-left:4px solid var(--flow-color, var(--green-500));
+    border-radius:14px;
+    padding:18px 20px;
+    box-shadow:0 10px 24px -20px rgba(18,30,20,0.2);
+  }
+  .flow-num{
+    width:34px; height:34px; border-radius:50%; flex-shrink:0;
+    background:var(--flow-color, var(--green-500)); color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Amiri', serif; font-weight:700; font-size:15px;
+  }
+  .flow-tag{
+    font-size:10.5px; font-weight:800; letter-spacing:.07em; text-transform:uppercase;
+    color:var(--flow-color, var(--green-700));
+  }
+  .flow-step h4{ margin-top:2px; font-size:15px; color:var(--ink); font-weight:700; }
+  .flow-step p{ margin-top:5px; font-size:13px; color:var(--ink-soft); line-height:1.55; }
+
+  /* ---------- list of cards ---------- */
+  .batch-list{ margin-top:32px; display:grid; gap:16px; padding-bottom:70px; }
+
+  .batch-row{
+    position:relative;
+    overflow:hidden;
+    display:flex; align-items:center; gap:18px;
+    background:#FFFFFF;
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:20px 26px;
+    box-shadow:0 10px 28px -18px rgba(18,30,20,0.18);
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .batch-row.is-open{ cursor:pointer; }
+  .batch-row.is-open:hover{ transform:translateY(-3px); border-color:var(--green-500); box-shadow:0 20px 40px -20px rgba(18,30,20,0.22); }
+  .batch-row.is-closed{ opacity:.72; }
+
+  .ribbon{
+    position:absolute;
+    top:16px; left:-42px;
+    width:160px;
+    transform:rotate(-45deg);
+    background:linear-gradient(90deg, var(--gold-600), var(--green-600, var(--green-500)));
+    color:#fff;
+    text-align:center;
+    font-size:10.5px;
+    font-weight:800;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    padding:5px 0;
+    box-shadow:0 4px 10px rgba(0,0,0,.25);
+    z-index:2;
+  }
+  
+  .batch-row.is-closed .ribbon{
+    background:linear-gradient(90deg, #E74C3C, #C0392B);
+    box-shadow:0 4px 10px rgba(192,57,43,.35);
+  }
+
+  .row-icon{
+    width:52px; height:52px; border-radius:14px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    color:#fff;
+  }
+  .row-icon.c-green{ background:linear-gradient(150deg, var(--green-500), var(--green-900)); }
+  .row-icon.c-gold{ background:linear-gradient(150deg, var(--gold-400), var(--gold-800)); }
+
+  .row-main{ flex:1; min-width:0; }
+  .row-title-line{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .row-title-line h3{ font-size:17px; }
+  .status-chip{
+    font-size:10.5px; font-weight:800; letter-spacing:.06em; text-transform:uppercase;
+    padding:4px 10px; border-radius:999px;
+  }
+  .status-chip.open{ background:var(--green-tint); color:var(--green-700); }
+  .status-chip.closed{ background:#EFEFEF; color:#8A8A8A; }
+  .row-tag{ font-size:11.5px; color:var(--ink-soft); font-weight:600; }
+  .row-desc{ margin-top:5px; font-size:13.5px; color:var(--ink-soft); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+  .row-action{ flex-shrink:0; }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; padding:11px 20px; border-radius:999px;
+    font-weight:700; font-size:13.5px; border:none; transition:transform .18s ease, background .18s ease;
+    white-space:nowrap;
+  }
+  .btn-open{ background:var(--green-tint); color:var(--green-700); }
+  .btn-open:hover{ background:var(--green-700); color:#fff; transform:translateY(-1px); }
+  .btn-closed{ background:#F0F0F0; color:#9B9B9B; cursor:default; }
+
+  @media(max-width:600px){
+    .batch-row{ flex-wrap:wrap; }
+    .row-action{ width:100%; }
+    .row-action .btn{ width:100%; justify-content:center; }
+  }
+
+  /* ---------- modal ---------- */
+  .modal-overlay{
+    display:none;
+    position:fixed; inset:0; z-index:300;
+    background:rgba(10,20,10,.55);
+    align-items:center; justify-content:center;
+    padding:24px;
+  }
+  .modal-overlay.is-active{ display:flex; }
+  .modal-box{
+    background:#FFFFFF;
+    border-radius:var(--radius-lg);
+    max-width:600px; width:100%;
+    max-height:88vh; overflow-y:auto;
+    box-shadow:0 40px 80px -30px rgba(0,0,0,0.5);
+    position:relative;
+  }
+  .modal-accent{ height:6px; background:linear-gradient(90deg, var(--gold-600), var(--green-500) 55%, var(--green-900)); border-radius:var(--radius-lg) var(--radius-lg) 0 0; }
+  .modal-close{
+    position:absolute; top:20px; right:20px;
+    width:34px; height:34px; border-radius:50%;
+    background:var(--parchment); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--ink-soft); font-size:18px; line-height:1;
+  }
+  .modal-close:hover{ background:var(--line); }
+
+  /* ---------- pakta integritas ---------- */
+  .pakta-pill{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:11px; font-weight:800; letter-spacing:.05em; text-transform:uppercase;
+    color:var(--green-700); background:var(--green-tint);
+    padding:7px 16px; border-radius:999px;
+  }
+  .pakta-title{ margin-top:18px; font-size:22px; line-height:1.35; text-align:center; }
+  .pakta-title .hl{ color:var(--green-700); display:block; }
+  .pakta-sub{ margin-top:10px; font-size:13.5px; color:var(--ink-soft); text-align:center; line-height:1.6; }
+
+  .pakta-warning{
+    margin-top:22px; display:flex; gap:12px;
+    background:var(--gold-tint); border:1px solid rgba(174,139,38,.35);
+    border-radius:14px; padding:16px 18px;
+  }
+  .pakta-warning svg{ flex-shrink:0; color:var(--gold-800); margin-top:1px; }
+  .pakta-warning strong{ font-size:13.5px; color:#7A4E12; display:block; }
+  .pakta-warning p{ margin-top:3px; font-size:12.5px; color:#8A6A2E; line-height:1.55; }
+
+  .pakta-declare{
+    margin-top:24px; margin-bottom:12px;
+    font-size:13px; font-weight:700; color:var(--ink);
+    padding-left:12px; border-left:3px solid var(--green-500);
+  }
+  .pakta-items{ display:grid; gap:10px; }
+  .pakta-item{
+    display:flex; align-items:flex-start; gap:12px;
+    border:1px solid var(--line); border-radius:12px; padding:14px 16px;
+    cursor:pointer; transition:border-color .2s ease, background .2s ease;
+  }
+  .pakta-item:hover{ border-color:var(--green-500); }
+  .pakta-item input{ display:none; }
+  .pakta-check{
+    width:20px; height:20px; border-radius:6px; flex-shrink:0; margin-top:1px;
+    border:2px solid var(--line); background:#fff;
+    display:flex; align-items:center; justify-content:center;
+    transition:background .2s ease, border-color .2s ease;
+  }
+  .pakta-item input:checked ~ .pakta-check{ background:var(--green-500); border-color:var(--green-500); }
+  .pakta-check svg{ width:12px; height:12px; color:#fff; opacity:0; transition:opacity .15s ease; }
+  .pakta-item input:checked ~ .pakta-check svg{ opacity:1; }
+  .pakta-item h4{ font-size:13.5px; color:var(--ink); font-weight:700; }
+  .pakta-item p{ margin-top:3px; font-size:12.5px; color:var(--ink-soft); line-height:1.5; }
+  .pakta-item strong{ color:var(--green-700); }
+
+  .pakta-submit{
+    width:100%; margin-top:24px; padding:15px; border:none; border-radius:999px;
+    font-weight:700; font-size:14.5px; color:#fff; cursor:pointer;
+    display:flex; align-items:center; justify-content:center; gap:8px;
+    background:linear-gradient(135deg, var(--green-700), var(--green-900));
+    transition:opacity .2s ease, transform .2s ease;
+  }
+  .pakta-submit:disabled{ opacity:.4; cursor:not-allowed; }
+  .pakta-submit:not(:disabled):hover{ transform:translateY(-2px); }
+  .pakta-note{ margin-top:10px; font-size:11.5px; color:var(--ink-soft); text-align:center; }
+  .modal-body{ padding:38px 36px 32px; }
+  @media(max-width:560px){ .modal-body{ padding:30px 22px 26px; } }
+
+  .modal-category-pill{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:10.5px; font-weight:800; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--green-700); background:var(--green-tint);
+    padding:6px 14px; border-radius:999px; margin-bottom:14px;
+  }
+  .modal-category-pill .dot{ width:6px; height:6px; border-radius:50%; background:var(--green-500); }
+  .modal-body h2{ font-size:24px; }
+  .modal-meta-row{
+    display:flex; flex-wrap:wrap; align-items:center; gap:14px;
+    margin-top:8px; font-size:13px; color:var(--ink-soft); font-weight:600;
+  }
+
+  /* ---------- Modal Success Notification ---------- */
+  .modal-success-overlay{
+    display:none;
+    position:fixed; inset:0; z-index:400;
+    background:rgba(10,20,10,.65);
+    align-items:center; justify-content:center;
+    padding:24px;
+    animation:fadeIn .3s ease;
+  }
+  .modal-success-overlay.is-active{ display:flex; }
+  @keyframes fadeIn{
+    from{ opacity:0; }
+    to{ opacity:1; }
+  }
+  .modal-success-box{
+    background:#FFFFFF;
+    border-radius:28px;
+    max-width:520px; width:100%;
+    box-shadow:0 50px 100px -30px rgba(0,0,0,0.3);
+    position:relative;
+    animation:slideUp .4s ease;
+  }
+  @keyframes slideUp{
+    from{ transform:translateY(40px); opacity:0; }
+    to{ transform:translateY(0); opacity:1; }
+  }
+  .modal-success-top{
+    background:linear-gradient(135deg, var(--green-700), var(--green-900));
+    border-radius:28px 28px 0 0;
+    padding:40px 32px;
+    text-align:center;
+  }
+  .modal-success-icon{
+    width:64px; height:64px;
+    border-radius:50%;
+    background:rgba(255,255,255,.2);
+    border:3px solid #FFFFFF;
+    display:flex; align-items:center; justify-content:center;
+    margin:0 auto 20px;
+    font-size:32px;
+  }
+  .modal-success-title{
+    font-size:26px; font-weight:700; color:#FFFFFF;
+    margin:0; font-family:'Amiri', serif;
+  }
+  .modal-success-subtitle{
+    font-size:14px; color:rgba(255,255,255,.9);
+    margin-top:8px;
+  }
+  .modal-success-body{
+    padding:32px;
+  }
+  .modal-success-id{
+    background:var(--green-tint);
+    border:1px solid rgba(46,143,85,.3);
+    border-radius:14px;
+    padding:14px 16px;
+    margin-bottom:24px;
+    text-align:center;
+  }
+  .modal-success-id label{
+    display:block;
+    font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--green-700);
+    margin-bottom:6px;
+  }
+  .modal-success-id .id-text{
+    font-size:14px; font-weight:700; color:var(--green-900);
+    font-family:monospace;
+    word-break:break-all;
+  }
+  .modal-success-message{
+    font-size:14px; color:var(--ink-soft);
+    line-height:1.7;
+    margin-bottom:24px;
+  }
+  .modal-success-wa-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    width:100%;
+    padding:16px;
+    background:linear-gradient(135deg, #25D366, #1BA853);
+    color:#FFFFFF;
+    text-decoration:none;
+    border-radius:12px;
+    font-weight:700;
+    font-size:15px;
+    text-align:center;
+    justify-content:center;
+    border:none;
+    cursor:pointer;
+    transition:transform .2s ease, box-shadow .2s ease;
+    margin-bottom:12px;
+  }
+  .modal-success-wa-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 15px 30px rgba(37,211,102,.3);
+  }
+  .modal-success-wa-btn svg{
+    width:18px; height:18px;
+  }
+  .modal-success-close-btn{
+    width:100%;
+    padding:12px 16px;
+    border:1px solid var(--line);
+    background:#FFFFFF;
+    border-radius:12px;
+    font-weight:600;
+    font-size:14px;
+    color:var(--green-700);
+    cursor:pointer;
+    transition:background .2s ease, color .2s ease;
+  }
+  .modal-success-close-btn:hover{
+    background:var(--green-tint);
+  }
+  @media(max-width:560px){
+    .modal-success-top{ padding:32px 24px; }
+    .modal-success-body{ padding:24px; }
+    .modal-success-title{ font-size:22px; }
+  }
+  .modal-meta-row span{ display:inline-flex; align-items:center; gap:6px; }
+  .modal-meta-row svg{ width:14px; height:14px; flex-shrink:0; }
+  .status-chip-inline{
+    font-size:10.5px; font-weight:800; letter-spacing:.05em; text-transform:uppercase;
+    padding:4px 11px; border-radius:999px; background:var(--gold-tint); color:var(--gold-800);
+  }
+
+  .modal-section{ 
+    margin-top:22px;
+    background:linear-gradient(135deg, rgba(232,245,238,.5) 0%, rgba(255,249,240,.3) 100%);
+    border:1px solid rgba(46,143,85,.12);
+    border-radius:16px;
+    padding:24px;
+    box-shadow:0 8px 24px -12px rgba(18,61,38,.08);
+  }
+  .modal-section-title{
+    display:flex; align-items:center; gap:12px;
+    font-family:'Amiri', serif; font-weight:700; font-size:17.5px; color:var(--green-900);
+    margin-bottom:16px;
+    padding-bottom:12px;
+    border-bottom:2px solid rgba(46,143,85,.15);
+  }
+  .modal-section-title .msi{
+    width:40px; height:40px; border-radius:12px; flex-shrink:0;
+    background:linear-gradient(135deg, rgba(46,143,85,.12), rgba(174,139,38,.08));
+    border:1px solid rgba(46,143,85,.2);
+    display:flex; align-items:center; justify-content:center; 
+    color:var(--green-700);
+    box-shadow:0 4px 12px rgba(18,61,38,.08);
+  }
+  .modal-section-title .msi svg{ width:18px; height:18px; }
+  .modal-desc{ 
+    font-size:14px; 
+    color:var(--ink); 
+    line-height:1.7;
+    background:linear-gradient(135deg, rgba(46,143,85,.08) 0%, rgba(174,139,38,.05) 100%);
+    border:1px solid rgba(46,143,85,.15);
+    border-left:4px solid var(--green-500);
+    border-radius:12px;
+    padding:16px 18px;
+    margin-bottom:20px;
+  }
+
+  /* Roadmap Santri LQ - step diagram */
+  .roadmap-box{
+    background:linear-gradient(135deg, rgba(232,245,238,.4) 0%, rgba(255,249,240,.2) 100%);
+    border:1px solid rgba(46,143,85,.15);
+    border-radius:16px;
+    padding:20px 18px;
+    box-shadow:0 8px 24px -12px rgba(18,61,38,.08);
+  }
+  .roadmap-steps{ display:flex; align-items:flex-start; justify-content:space-between; gap:6px; position:relative; }
+  .roadmap-steps::before{
+    content:""; position:absolute; top:20px; left:8%; right:8%; height:2px;
+    background:linear-gradient(90deg, rgba(46,143,85,.2) 0%, rgba(46,143,85,.3) 50%, rgba(46,143,85,.2) 100%);
+    z-index:0;
+  }
+  .roadmap-step{ 
+    position:relative; z-index:1; flex:1; text-align:center; display:flex; flex-direction:column; align-items:center;
+    transition:transform .3s ease;
+    padding:10px;
+    border-radius:12px;
+    background:rgba(255,255,255,.3);
+  }
+  /* Warna background unik untuk setiap step */
+  .roadmap-step:nth-child(1){
+    background:linear-gradient(135deg, rgba(200,230,201,.4), rgba(232,245,238,.6));
+  }
+  .roadmap-step:nth-child(2){
+    background:linear-gradient(135deg, rgba(255,224,130,.4), rgba(255,248,225,.6));
+  }
+  .roadmap-step:nth-child(3){
+    background:linear-gradient(135deg, rgba(178,214,219,.4), rgba(224,242,241,.6));
+  }
+  .roadmap-step:nth-child(4){
+    background:linear-gradient(135deg, rgba(225,190,231,.4), rgba(243,229,245,.6));
+  }
+  .roadmap-step:hover{
+    transform:translateY(-3px);
+    background:rgba(255,255,255,.5);
+  }
+  .roadmap-step .num{
+    width:42px; height:42px; border-radius:50%; background:#FFFFFF;
+    border:3px solid var(--green-500); color:var(--green-700);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Amiri', serif; font-weight:700; font-size:16px;
+    margin-bottom:8px;
+    box-shadow:0 6px 16px rgba(46,143,85,.15);
+    transition:all .3s ease;
+  }
+  /* Warna unik untuk setiap tahap */
+  .roadmap-step:nth-child(1) .num{
+    background:linear-gradient(135deg, #E8F5E9, #C8E6C9);
+    border-color:#2E8F55;
+    color:#1B5E20;
+    box-shadow:0 6px 16px rgba(46,143,85,.2);
+  }
+  .roadmap-step:nth-child(2) .num{
+    background:linear-gradient(135deg, #FFF8E1, #FFE082);
+    border-color:#C08A28;
+    color:#7A5E1D;
+    box-shadow:0 6px 16px rgba(174,139,38,.2);
+  }
+  .roadmap-step:nth-child(3) .num{
+    background:linear-gradient(135deg, #E0F2F1, #B2DFDB);
+    border-color:#1B6B41;
+    color:#004D40;
+    box-shadow:0 6px 16px rgba(27,107,65,.2);
+  }
+  .roadmap-step:nth-child(4) .num{
+    background:linear-gradient(135deg, #F3E5F5, #E1BEE7);
+    border-color:#8B6E9C;
+    color:#4A148C;
+    box-shadow:0 6px 16px rgba(139,110,156,.2);
+  }
+  .roadmap-step:hover .num{
+    box-shadow:0 10px 24px rgba(46,143,85,.25);
+    transform:scale(1.1);
+  }
+  .roadmap-step .lvl{ 
+    font-size:10px; 
+    font-weight:700; 
+    letter-spacing:.08em; 
+    text-transform:uppercase; 
+    color:var(--ink-soft);
+    opacity:.8;
+    margin-top:2px;
+  }
+  .roadmap-step .name{ 
+    margin-top:2px; 
+    font-size:13px; 
+    font-weight:700; 
+    color:var(--ink); 
+    line-height:1.3;
+  }
+  @media(max-width:520px){ .roadmap-step .name{ font-size:11.5px; } }
+
+  .qual-grid{ 
+    display:grid; 
+    gap:10px;
+    margin-top:16px;
+  }
+  @media(min-width:520px){ .qual-grid{ grid-template-columns:1fr 1fr; } }
+  .qual-item{
+    display:flex; 
+    align-items:flex-start; 
+    gap:10px;
+    background:linear-gradient(135deg, rgba(232,245,238,.6) 0%, rgba(255,249,240,.4) 100%);
+    border:1px solid rgba(46,143,85,.18);
+    border-radius:14px;
+    padding:12px 14px; 
+    font-size:13px; 
+    color:var(--ink);
+    line-height:1.5;
+    transition:all .3s ease;
+    box-shadow:0 4px 12px -8px rgba(18,61,38,.08);
+  }
+  /* Warna unik untuk setiap kualifikasi */
+  .qual-item:nth-child(1){
+    background:linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+    border-color:rgba(46,143,85,.3);
+  }
+  .qual-item:nth-child(2){
+    background:linear-gradient(135deg, #FFF8E1 0%, #FFE082 100%);
+    border-color:rgba(192,138,40,.3);
+  }
+  .qual-item:nth-child(3){
+    background:linear-gradient(135deg, #E0F2F1 0%, #B2DFDB 100%);
+    border-color:rgba(27,107,65,.3);
+  }
+  .qual-item:nth-child(4){
+    background:linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);
+    border-color:rgba(139,110,156,.3);
+  }
+  .qual-item:nth-child(5){
+    background:linear-gradient(135deg, #FCE4EC 0%, #F8BBD0 100%);
+    border-color:rgba(194,63,134,.3);
+  }
+  .qual-item:nth-child(6){
+    background:linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+    border-color:rgba(13,71,161,.3);
+  }
+  .qual-item:nth-child(7){
+    background:linear-gradient(135deg, #F1F8E9 0%, #DCEDC8 100%);
+    border-color:rgba(85,139,47,.3);
+  }
+  .qual-item:nth-child(8){
+    background:linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+    border-color:rgba(230,124,15,.3);
+  }
+  .qual-item:nth-child(9){
+    background:linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+    border-color:rgba(93,64,55,.3);
+  }
+  .qual-item:nth-child(10){
+    background:linear-gradient(135deg, #F0F4C3 0%, #E6EE9C 100%);
+    border-color:rgba(158,157,36,.3);
+  }
+  .qual-item:hover{
+    border-color:rgba(46,143,85,.5);
+    box-shadow:0 8px 20px -8px rgba(18,61,38,.15);
+    transform:translateY(-2px);
+  }
+  .qual-item svg{ 
+    flex-shrink:0; 
+    margin-top:3px; 
+    color:var(--green-500);
+    width:18px;
+    height:18px;
+  }
+
+  .modal-footer-actions{
+    margin-top:32px; padding-top:24px; border-top:1px solid var(--line);
+    display:flex; align-items:center; justify-content:flex-end; gap:20px;
+  }
+  .btn-batal{ font-weight:700; font-size:14px; color:var(--ink-soft); }
+  .btn-batal:hover{ color:var(--ink); }
+
+  .timeline{
+    margin-top:16px;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:0;
+    border-radius:16px; 
+    border:1px solid rgba(46,143,85,.15); 
+    overflow:hidden;
+    box-shadow:0 8px 24px -12px rgba(18,61,38,.1);
+    background:linear-gradient(135deg, rgba(46,143,85,.03), rgba(174,139,38,.02));
+  }
+  @media(max-width:520px){ .timeline{ grid-template-columns:1fr; } }
+  .tl-item{ 
+    padding:16px 14px; 
+    background:transparent;
+    border-right:1px solid rgba(46,143,85,.12);
+    transition:all .3s ease;
+  }
+  /* Warna unik untuk setiap timeline item */
+  .tl-item:nth-child(1){
+    background:linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+  }
+  .tl-item:nth-child(2){
+    background:linear-gradient(135deg, #FFF8E1 0%, #FFE082 100%);
+  }
+  .tl-item:nth-child(3){
+    background:linear-gradient(135deg, #E0F2F1 0%, #B2DFDB 100%);
+  }
+  .tl-item:hover{
+    background:linear-gradient(135deg, rgba(46,143,85,.12), rgba(174,139,38,.08));
+    box-shadow:inset 0 2px 8px rgba(0,0,0,.05);
+  }
+  .tl-item:last-child{ border-right:none; }
+  @media(max-width:520px){ 
+    .tl-item{ border-right:none; border-bottom:1px solid rgba(46,143,85,.12); } 
+    .tl-item:last-child{ border-bottom:none; } 
+  }
+  .tl-label{ 
+    font-size:11px; 
+    font-weight:700; 
+    letter-spacing:.08em; 
+    text-transform:uppercase; 
+    color:var(--green-700);
+    opacity:.8;
+  }
+  .tl-value{ 
+    margin-top:4px; 
+    font-family:'Amiri', serif; 
+    font-weight:700; 
+    font-size:16px; 
+    color:var(--green-900);
+    line-height:1.3;
+  }
+
+  .divider{ height:1px; background:var(--line); margin:26px 0; }
+
+  .reqs h4{ font-size:12.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--green-700); margin-bottom:14px; }
+  .reqs ul{ display:grid; gap:11px; }
+  .reqs li{ display:flex; align-items:flex-start; gap:10px; font-size:13.5px; color:var(--ink); }
+  .reqs li svg{ flex-shrink:0; margin-top:2px; color:var(--gold-600); }
+
+  .modal-footer{
+    margin-top:28px; padding-top:24px; border-top:1px solid var(--line);
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .price-block .label{ font-size:10.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); }
+  .price-block .value{ margin-top:3px; font-family:'Amiri', serif; font-weight:700; font-size:20px; color:var(--green-900); }
+  .free-badge{
+    display:inline-block; margin-left:8px; font-family:'Plus Jakarta Sans',sans-serif;
+    font-size:10.5px; font-weight:800; letter-spacing:.04em; text-transform:uppercase;
+    color:var(--gold-800); background:var(--gold-tint); padding:3px 10px; border-radius:999px;
+    vertical-align:middle;
+  }
+  .price-rows{ display:grid; gap:12px; }
+  .price-row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .price-row .old-price{
+    font-family:'Amiri', serif; font-style:italic; font-weight:700; font-size:15px;
+    color:#C0392B; text-decoration:line-through; text-decoration-thickness:2px;
+  }
+  .price-row .arrow{ color:var(--ink-soft); flex-shrink:0; }
+  .price-row .new-price{ font-family:'Amiri', serif; font-weight:700; font-size:19px; color:var(--green-900); }
+  .price-row .scholarship-tag{ font-size:12px; color:var(--ink-soft); }
+  .price-row .scholarship-tag .limited{ color:#C0392B; font-weight:700; }
+
+  /* ---------- rincian biaya pendidikan ---------- */
+  .cost-card{
+    background:linear-gradient(160deg, var(--green-900) 0%, var(--forest-950, #0A2818) 100%);
+    border-radius:var(--radius-md);
+    padding:26px 24px;
+    color:rgba(247,241,227,.9);
+  }
+  .cost-rows{ display:grid; gap:0; }
+  .cost-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:10px 0; border-bottom:1px solid rgba(247,241,227,.14);
+    font-size:13px;
+  }
+  .cost-row span:last-child{ font-weight:700; }
+  .cost-row.total{
+    border-bottom:none; margin-top:4px; padding-top:14px;
+    font-weight:800; font-size:13.5px;
+  }
+  .cost-row.total span:last-child{ color:var(--gold-400,#C9A227); font-size:15px; }
+  .cost-note{ margin-top:14px; font-size:11.5px; color:rgba(247,241,227,.6); line-height:1.6; }
+  .cost-highlight{
+    margin-top:18px; background:rgba(247,241,227,.08); border-radius:12px;
+    padding:16px 18px; text-align:center;
+  }
+  .cost-highlight p{ font-size:12px; color:rgba(247,241,227,.75); line-height:1.6; }
+  .cost-highlight .amount{ margin-top:8px; font-family:'Amiri', serif; font-weight:700; font-size:24px; color:#fff; }
+  .cost-highlight.gold .amount{ color:var(--gold-400,#C9A227); }
+
+  /* ---------- pilihan jalur ---------- */
+  .track-grid{ display:grid; gap:16px; margin-top:16px; }
+  @media(min-width:480px){ .track-grid{ grid-template-columns:1fr 1fr; } }
+  .track-card{
+    border:1.5px solid var(--gold-600); border-radius:var(--radius-md);
+    padding:20px 18px; background:var(--cream-card);
+  }
+  .track-card.is-mandiri{ border-color:var(--green-500); }
+  .track-title{ display:flex; align-items:center; gap:8px; font-family:'Amiri', serif; font-weight:700; font-size:15px; color:var(--green-900); }
+  .track-title svg{ width:18px; height:18px; color:var(--gold-600); flex-shrink:0; }
+  .track-card.is-mandiri .track-title svg{ color:var(--green-500); }
+  .track-points{ margin-top:12px; display:grid; gap:7px; }
+  .track-points div{ display:flex; align-items:flex-start; gap:7px; font-size:12px; color:var(--ink); }
+  .track-points svg{ width:13px; height:13px; margin-top:2px; flex-shrink:0; color:var(--gold-600); }
+  .track-card.is-mandiri .track-points svg{ color:var(--green-500); }
+  .track-fees{ margin-top:14px; padding-top:12px; border-top:1px dashed var(--line); display:grid; gap:6px; }
+  .track-fee-row{ display:flex; align-items:center; justify-content:space-between; font-size:12px; color:var(--ink-soft); }
+  .track-fee-row.spp span:last-child{ color:var(--green-700); font-weight:800; font-size:13px; }
+  .track-fee-row .old-fee{ text-decoration:line-through; color:#C0392B; font-style:italic; margin-right:6px; opacity:.85; }
+  .track-btn{
+    display:block; width:100%; margin-top:14px; padding:11px; text-align:center;
+    border:none; border-radius:999px; font-weight:700; font-size:13px; color:#fff; cursor:pointer;
+    background:linear-gradient(135deg, var(--green-700), var(--green-900));
+  }
+  .btn-primary{
+    background:linear-gradient(135deg, var(--green-700), var(--green-900));
+    color:#fff;
+    box-shadow:0 16px 30px -14px rgba(10,59,31,0.55);
+  }
+  .btn-primary:hover{ transform:translateY(-2px); }
+
+  .note-box{
+    margin-top:6px; display:flex; gap:12px;
+    background:var(--gold-tint); border:1px solid rgba(174,139,38,.3);
+    border-radius:var(--radius-md); padding:16px 20px; font-size:13px; color:var(--ink-soft);
+  }
+  .note-box svg{ flex-shrink:0; color:var(--gold-800); margin-top:1px; }
+
+  footer{ background:var(--green-900); color:rgba(247,241,227,.55); padding:26px 0; text-align:center; font-size:13px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <span class="brand-mark-wrap"><img class="brand-mark" src="data:image/png;base64,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" alt="Logo Baitul Qur'an"></span>
+      <span class="brand-text">Baitul Qur'an<span>Surau Berkah Madani Center</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Beranda</a>
+      <div class="nav-item">
+        <a href="javascript:void(0)" class="nav-trigger">Lembaga
+          <svg class="chev" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg); transition: transform .35s ease;">
+            <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </a>
+        <div class="nav-dropdown">
+          <a href="kehidupan-pondok.html"><span class="dot" style="background:var(--amber-500)"></span>Pondok Lumbung Qur'an</a>
+          <a href="kehidupan-rumah-quran.html"><span class="dot" style="background:var(--teal-500)"></span>Rumah Qur'an Syamil Madani</a>
+        </div>
+      </div>
+      <a href="index.html">Program</a>
+      <div class="nav-item">
+        <a href="javascript:void(0)" class="nav-trigger">Gelombang
+          <svg class="chev" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg); transition: transform .35s ease;">
+            <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </a>
+        <div class="nav-dropdown">
+          <a href="gelombang-pendaftaran.html"><span class="dot" style="background:var(--amber-500)"></span>Pondok Lumbung Qur'an</a>
+          <a href="gelombang-syamil-madani.html"><span class="dot" style="background:var(--teal-500)"></span>Rumah Qur'an Syamil Madani</a>
+        </div>
+      </div>
+      <a href="index.html#kontak">Kontak</a>
+    </nav>
+    <div class="nav-right">
+      <a href="index.html" class="nav-plain">Tentang Kami</a>
+      <a href="index.html" class="btn btn-gold btn-sm">Daftar Sekarang</a>
+    </div>
+    <button class="menu-btn btn btn-ghost-dark" onclick="document.getElementById('mobileNav').classList.toggle('open')" aria-label="Buka menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div id="mobileNav" style="display:none;" class="container">
+    <a href="index.html" class="mobile-link">Beranda</a>
+    <a href="kehidupan-pondok.html" class="mobile-link">Pondok Lumbung Qur'an</a>
+    <a href="kehidupan-rumah-quran.html" class="mobile-link">Rumah Qur'an Syamil Madani</a>
+    <a href="index.html" class="mobile-link">Program</a>
+    <a href="gelombang-pendaftaran.html" class="mobile-link">Gelombang PLQ</a>
+    <a href="gelombang-syamil-madani.html" class="mobile-link">Gelombang Syamil Madani</a>
+    <a href="index.html#kontak" class="mobile-link">Kontak</a>
+    <a href="index.html" class="btn btn-gold btn-sm" style="margin-top:12px;">Daftar Sekarang</a>
+  </div>
+</header>
+
+<section class="top-section">
+  <div class="container">
+    <div class="badges-row">
+      <span class="pill pill-outline"><span class="dot"></span>KATEGORI TERPILIH</span>
+      <div class="pill-group">
+        <span class="pill pill-solid-gold">Status: Pendaftaran</span>
+        <span class="pill pill-solid-green">1 Gelombang Dibuka</span>
+      </div>
+    </div>
+    <h1><span class="gradient-text">Gelombang Pendaftaran</span><br>Santri Baru</h1>
+    <p class="lead">Pondok Lumbung Qur'an membuka pendaftaran dalam beberapa gelombang. Klik gelombang yang sudah dibuka untuk melihat jadwal, syarat, dan biaya pendaftaran.</p>
+  </div>
+</section>
+
+<section class="flow-section">
+  <div class="container">
+    <div class="flow-head">
+      <span class="eyebrow">Proses Pendaftaran</span>
+      <h2>6 Tahapan Seleksi Calon Santri</h2>
+    </div>
+    <div class="flow-list">
+      <div class="flow-step" style="--flow-color:var(--green-500);">
+        <div class="flow-num">1</div>
+        <div>
+          <div class="flow-tag">Tahap Awal</div>
+          <h4>Pendaftaran &amp; Isi Data</h4>
+          <p>Isi formulir pendaftaran online dengan data diri yang lengkap dan valid, sesuai gelombang yang sedang dibuka.</p>
+        </div>
+      </div>
+      <div class="flow-step" style="--flow-color:var(--gold-600);">
+        <div class="flow-num">2</div>
+        <div>
+          <div class="flow-tag">Verifikasi</div>
+          <h4>Verifikasi Berkas</h4>
+          <p>Tim admin memeriksa kelengkapan dan keabsahan berkas yang Anda kirimkan sebelum melanjutkan ke tahap seleksi.</p>
+        </div>
+      </div>
+      <div class="flow-step" style="--flow-color:var(--bronze);">
+        <div class="flow-num">3</div>
+        <div>
+          <div class="flow-tag">Seleksi</div>
+          <h4>Tes Baca Al-Qur'an</h4>
+          <p>Tes baca Al-Qur'an dasar untuk mengukur kesiapan calon santri mengikuti program tahfizh di pondok.</p>
+        </div>
+      </div>
+      <div class="flow-step" style="--flow-color:var(--green-700);">
+        <div class="flow-num">4</div>
+        <div>
+          <div class="flow-tag">Tatap Muka</div>
+          <h4>Wawancara &amp; Validasi</h4>
+          <p>Wawancara langsung untuk memvalidasi kesiapan mental, komitmen, dan kesungguhan calon santri.</p>
+        </div>
+      </div>
+      <div class="flow-step" style="--flow-color:var(--gold-400);">
+        <div class="flow-num">5</div>
+        <div>
+          <div class="flow-tag">Pengumuman</div>
+          <h4>Pengumuman Kelulusan</h4>
+          <p>Hasil seleksi diumumkan melalui kontak yang terdaftar, sesuai jadwal pengumuman gelombang masing-masing.</p>
+        </div>
+      </div>
+      <div class="flow-step" style="--flow-color:var(--green-900);">
+        <div class="flow-num">6</div>
+        <div>
+          <div class="flow-tag">Resmi Bergabung</div>
+          <h4>Resmi Menjadi Mahasantri</h4>
+          <p>Calon santri yang lulus resmi menjadi Mahasantri dan memulai perjalanan di Pondok Lumbung Qur'an.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="batch-list" id="batchList">
+
+    <div class="batch-row is-closed" data-batch="1">
+      <span class="ribbon">Ditutup</span>
+      <div class="row-icon c-green">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="row-main">
+        <div class="row-title-line">
+          <h3>Gelombang 1</h3>
+          <span class="status-chip closed">Ditutup</span>
+          <span class="row-tag">Tahun Ajaran 2026/2027</span>
+        </div>
+        <p class="row-desc">Pendaftaran Gelombang 1 telah ditutup. Terima kasih atas antusiasme Anda. Silahkan ikuti Gelombang 2.</p>
+      </div>
+      <div class="row-action">
+        <span class="btn btn-closed">Gelombang Sudah Ditutup</span>
+      </div>
+    </div>
+
+    <div class="batch-row is-open" data-batch="2">
+      <span class="ribbon">Dibuka</span>
+      <div class="row-icon c-gold">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="row-main">
+        <div class="row-title-line">
+          <h3>Gelombang 2</h3>
+          <span class="status-chip open">Dibuka</span>
+          <span class="row-tag">Tahun Ajaran 2026/2027</span>
+        </div>
+        <p class="row-desc">Pendaftaran resmi telah dibuka. Klik untuk lihat jadwal, syarat, dan biaya pendaftaran.</p>
+      </div>
+      <div class="row-action">
+        <button class="btn btn-open" onclick="openModal(2)">Lihat Gelombang <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+
+    <div class="batch-row is-closed" data-batch="3">
+      <div class="row-icon c-green">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="row-main">
+        <div class="row-title-line">
+          <h3>Gelombang 3</h3>
+          <span class="status-chip closed">Belum Dibuka</span>
+          <span class="row-tag">Tahun Ajaran 2026/2027</span>
+        </div>
+        <p class="row-desc">Akan dibuka setelah Gelombang 2 selesai. Pantau terus halaman ini.</p>
+      </div>
+      <div class="row-action">
+        <span class="btn btn-closed">Gelombang Belum Dibuka</span>
+      </div>
+    </div>
+
+    <div class="batch-row is-closed" data-batch="4">
+      <div class="row-icon c-gold">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="row-main">
+        <div class="row-title-line">
+          <h3>Gelombang 4</h3>
+          <span class="status-chip closed">Belum Dibuka</span>
+          <span class="row-tag">Tahun Ajaran 2026/2027</span>
+        </div>
+        <p class="row-desc">Akan dibuka setelah Gelombang 3 selesai. Pantau terus halaman ini.</p>
+      </div>
+      <div class="row-action">
+        <span class="btn btn-closed">Gelombang Belum Dibuka</span>
+      </div>
+    </div>
+
+    <div class="batch-row is-closed" data-batch="5">
+      <div class="row-icon c-green">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="row-main">
+        <div class="row-title-line">
+          <h3>Gelombang 5</h3>
+          <span class="status-chip closed">Belum Dibuka</span>
+          <span class="row-tag">Tahun Ajaran 2026/2027</span>
+        </div>
+        <p class="row-desc">Akan dibuka setelah Gelombang 4 selesai. Pantau terus halaman ini.</p>
+      </div>
+      <div class="row-action">
+        <span class="btn btn-closed">Gelombang Belum Dibuka</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="note-box" style="margin-bottom:60px;">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 8v5M12 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg>
+    <span><strong>Catatan:</strong> Gelombang berikutnya akan otomatis berstatus "Dibuka" begitu jadwalnya ditetapkan oleh tim pendaftaran.</span>
+  </div>
+</div>
+
+<!-- Modal: Gelombang 1 -->
+<div class="modal-overlay" id="modal-1" onclick="closeModalOnOverlay(event, 1)">
+  <div class="modal-box">
+    <div class="modal-accent"></div>
+    <button class="modal-close" onclick="closeModal(1)" aria-label="Tutup">×</button>
+    <div class="modal-body">
+
+      <span class="modal-category-pill"><span class="dot"></span>Detail Calon Santri LQ</span>
+      <h2>Gelombang 1</h2>
+      <div class="modal-meta-row">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11Z" stroke-linejoin="round"/></svg>Indonesia</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7l-9-4Z" stroke-linejoin="round"/></svg>Pondok Lumbung Qur'an</span>
+        <span class="status-chip-inline">Tahun Ajaran 2026/2027</span>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">
+          <span class="msi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V6a2 2 0 0 1 2-2h13v15" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 22a2 2 0 0 1 0-4h13" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Deskripsi Pendaftaran
+        </div>
+        <p class="modal-desc">Gelombang 1 adalah tahap penerimaan Mahasantri baru Pondok Lumbung Qur'an untuk Tahun Ajaran 2026/2027. Program ini dirancang untuk membentuk generasi Qur'ani yang mutqin, berilmu, berdakwah, dan mandiri. Calon santri akan melalui serangkaian tahapan seleksi meliputi pemeriksaan administrasi, tes seleksi baca Al-Qur'an, dan wawancara mendalam untuk memastikan kesesuaian dengan visi dan misi pondok sebelum diterima sebagai Mahasantri.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-label">Periode Pendaftaran</div>
+          <div class="tl-value">Segera diumumkan</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-label">Tes Seleksi</div>
+          <div class="tl-value">Segera diumumkan</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-label">Pengumuman</div>
+          <div class="tl-value">Segera diumumkan</div>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">
+          <span class="msi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l3-3M4 15l6-6M13 6l7 7-9 3-1-4-5-1 8-5Z" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Roadmap Santri LQ
+        </div>
+        <div class="roadmap-box">
+          <div class="roadmap-steps">
+            <div class="roadmap-step">
+              <div class="num">1</div>
+              <div class="lvl">Tahap 1</div>
+              <div class="name">Mahasantri</div>
+            </div>
+            <div class="roadmap-step">
+              <div class="num">2</div>
+              <div class="lvl">Tahap 2</div>
+              <div class="name">Santri On Duty (SOD)</div>
+            </div>
+            <div class="roadmap-step">
+              <div class="num">3</div>
+              <div class="lvl">Tahap 3</div>
+              <div class="name">Probation</div>
+            </div>
+            <div class="roadmap-step">
+              <div class="num">4</div>
+              <div class="lvl">Tahap 4</div>
+              <div class="name">Santri Karya</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">
+          <span class="msi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5Z" stroke-linejoin="round"/></svg></span>
+          Kualifikasi &amp; Persyaratan
+        </div>
+        <div class="qual-grid">
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Usia minimal 17 tahun pada saat mendaftar</div>
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Ikhwan / Laki-laki</div>
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Memiliki hafalan minimal 3 Juz</div>
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Surat Keterangan Sehat</div>
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sudah menyelesaikan kitab Adab (Contoh: Ta'lim Muta'alim)</div>
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sudah lulus SMA/Sederajat</div>
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Memiliki kemampuan Tahsin yang baik</div>
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fotokopi Ijazah SMA</div>
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fotokopi KTP/Kartu Keluarga</div>
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Materai Rp10.000</div>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">
+          <span class="msi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Biaya Pendidikan
+        </div>
+        <div class="cost-card">
+          <p style="font-size:12.5px; color:rgba(247,241,227,.75); line-height:1.6; margin-bottom:14px;">Bayangkan kalau antum mencoba untuk mengikuti program tahfizh ini secara mandiri di luar, maka estimasi dana yang keluar adalah sebagai berikut:</p>
+          <div class="cost-rows">
+            <div class="cost-row"><span>Biaya makan / bulan</span><span>Rp500.000</span></div>
+            <div class="cost-row"><span>Biaya kos / bulan</span><span>Rp500.000</span></div>
+            <div class="cost-row"><span>Biaya program tahfizh / bulan</span><span>Rp500.000</span></div>
+            <div class="cost-row"><span>Biaya program bahasa Arab / bulan</span><span>Rp300.000</span></div>
+            <div class="cost-row"><span>Biaya bimbingan &amp; pembinaan / bulan</span><span>Rp300.000</span></div>
+            <div class="cost-row total"><span>TOTAL</span><span>Rp2.100.000 / Bulan</span></div>
+          </div>
+          <p class="cost-note">Ini belum ditambah biaya transportasi antum, biaya jajan, bensin, listrik, pulsa, dan lain-lain. Sehingga angkanya bisa sampai Rp3.000.000 / bulan.</p>
+
+          <div class="cost-highlight">
+            <p>Namun dengan bergabungnya antum di Pondok Lumbung Qur'an, kami memberikan semua fasilitas dan program tersebut kepada antum dengan biaya bulanan hanya:</p>
+            <div class="amount">Rp700.000 / bulan</div>
+          </div>
+          <div class="cost-highlight gold">
+            <p>Bahkan kami menyediakan program Beasiswa Full sehingga seluruh fasilitas dan program pembelajaran bisa antum dapatkan hanya dengan:</p>
+            <div class="amount">Rp0 / bulan</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">
+          <span class="msi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l3-3M4 15l6-6M13 6l7 7-9 3-1-4-5-1 8-5Z" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Pilihan Jalur Pendaftaran
+        </div>
+        <div class="track-grid">
+          <div class="track-card">
+            <div class="track-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 4 2 10l10 6 10-6Z" stroke-linejoin="round"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" stroke-linejoin="round"/></svg>
+              Jalur Beasiswa
+            </div>
+            <div class="track-points">
+              <div><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Punya hafalan minimal 5 Juz Mutqin</div>
+              <div><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wajib Full Asrama</div>
+              <div><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wajib pengabdian 2 tahun</div>
+            </div>
+            <div class="track-fees">
+              <div class="track-fee-row"><span>Pendaftaran</span><span><span class="old-fee">Rp100.000</span>Rp0</span></div>
+              <div class="track-fee-row"><span>Daftar Ulang</span><span>Rp1.000.000</span></div>
+              <div class="track-fee-row spp"><span>SPP</span><span>Rp0 (Beasiswa Full)</span></div>
+            </div>
+            <button class="track-btn" onclick="openModalWithDelay(1)">Daftar Beasiswa</button>
+          </div>
+
+          <div class="track-card is-mandiri">
+            <div class="track-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 4 2 10l10 6 10-6Z" stroke-linejoin="round"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" stroke-linejoin="round"/></svg>
+              Jalur Mandiri
+            </div>
+            <div class="track-points">
+              <div><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Punya hafalan minimal 3 Juz</div>
+              <div><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wajib pengabdian 1 tahun</div>
+              <div><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Boleh sambil kuliah</div>
+            </div>
+            <div class="track-fees">
+              <div class="track-fee-row"><span>Pendaftaran</span><span>Rp100.000</span></div>
+              <div class="track-fee-row"><span>Daftar Ulang</span><span>Rp1.000.000</span></div>
+              <div class="track-fee-row spp"><span>SPP</span><span>Rp500.000 / bulan</span></div>
+            </div>
+            <button class="track-btn" onclick="openModalWithDelay(1)">Daftar Mandiri</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer-actions" style="justify-content:center; border-top:none; margin-top:20px;">
+        <button class="btn-batal" onclick="closeModal(1)">Batal, kembali</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Gelombang 2 -->
+<div class="modal-overlay" id="modal-2" onclick="closeModalOnOverlay(event, 2)">
+  <div class="modal-box">
+    <div class="modal-accent"></div>
+    <button class="modal-close" onclick="closeModal(2)" aria-label="Tutup">×</button>
+    <div class="modal-body">
+
+      <span class="modal-category-pill"><span class="dot"></span>Detail Calon Santri LQ</span>
+      <h2>Gelombang 2</h2>
+      <div class="modal-meta-row">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11Z" stroke-linejoin="round"/></svg>Indonesia</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7l-9-4Z" stroke-linejoin="round"/></svg>Pondok Lumbung Qur'an</span>
+        <span class="status-chip-inline">Tahun Ajaran 2026/2027</span>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">
+          <span class="msi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V6a2 2 0 0 1 2-2h13v15" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 22a2 2 0 0 1 0-4h13" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Deskripsi Pendaftaran
+        </div>
+        <p class="modal-desc">Gelombang 2 adalah tahap lanjutan penerimaan Mahasantri baru Pondok Lumbung Qur'an untuk Tahun Ajaran 2026/2027. Program ini dirancang untuk membentuk generasi Qur'ani yang mutqin, berilmu, berdakwah, dan mandiri. Calon santri akan melalui serangkaian tahapan seleksi meliputi pemeriksaan administrasi, tes seleksi baca Al-Qur'an, dan wawancara mendalam untuk memastikan kesesuaian dengan visi dan misi pondok sebelum diterima sebagai Mahasantri.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-label">Periode Pendaftaran</div>
+          <div class="tl-value">Segera diumumkan</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-label">Tes Seleksi</div>
+          <div class="tl-value">Segera diumumkan</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-label">Pengumuman</div>
+          <div class="tl-value">Segera diumumkan</div>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">
+          <span class="msi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l3-3M4 15l6-6M13 6l7 7-9 3-1-4-5-1 8-5Z" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Roadmap Santri LQ
+        </div>
+        <div class="roadmap-box">
+          <div class="roadmap-steps">
+            <div class="roadmap-step">
+              <div class="num">1</div>
+              <div class="lvl">Tahap 1</div>
+              <div class="name">Mahasantri</div>
+            </div>
+            <div class="roadmap-step">
+              <div class="num">2</div>
+              <div class="lvl">Tahap 2</div>
+              <div class="name">Santri On Duty (SOD)</div>
+            </div>
+            <div class="roadmap-step">
+              <div class="num">3</div>
+              <div class="lvl">Tahap 3</div>
+              <div class="name">Probation</div>
+            </div>
+            <div class="roadmap-step">
+              <div class="num">4</div>
+              <div class="lvl">Tahap 4</div>
+              <div class="name">Santri Karya</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">
+          <span class="msi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5Z" stroke-linejoin="round"/></svg></span>
+          Kualifikasi &amp; Persyaratan
+        </div>
+        <div class="qual-grid">
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Usia minimal 17 tahun pada saat mendaftar</div>
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Ikhwan / Laki-laki</div>
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Memiliki hafalan minimal 3 Juz</div>
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Surat Keterangan Sehat</div>
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sudah menyelesaikan kitab Adab (Contoh: Ta'lim Muta'alim)</div>
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sudah lulus SMA/Sederajat</div>
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Memiliki kemampuan Tahsin yang baik</div>
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fotokopi Ijazah SMA</div>
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fotokopi KTP/Kartu Keluarga</div>
+          <div class="qual-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Materai Rp10.000</div>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">
+          <span class="msi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Biaya Pendidikan
+        </div>
+        <div class="cost-card">
+          <p style="font-size:12.5px; color:rgba(247,241,227,.75); line-height:1.6; margin-bottom:14px;">Bayangkan kalau antum mencoba untuk mengikuti program tahfizh ini secara mandiri di luar, maka estimasi dana yang keluar adalah sebagai berikut:</p>
+          <div class="cost-rows">
+            <div class="cost-row"><span>Biaya makan / bulan</span><span>Rp500.000</span></div>
+            <div class="cost-row"><span>Biaya kos / bulan</span><span>Rp500.000</span></div>
+            <div class="cost-row"><span>Biaya program tahfizh / bulan</span><span>Rp500.000</span></div>
+            <div class="cost-row"><span>Biaya program bahasa Arab / bulan</span><span>Rp300.000</span></div>
+            <div class="cost-row"><span>Biaya bimbingan &amp; pembinaan / bulan</span><span>Rp300.000</span></div>
+            <div class="cost-row total"><span>TOTAL</span><span>Rp2.100.000 / Bulan</span></div>
+          </div>
+          <p class="cost-note">Ini belum ditambah biaya transportasi antum, biaya jajan, bensin, listrik, pulsa, dan lain-lain. Sehingga angkanya bisa sampai Rp3.000.000 / bulan.</p>
+
+          <div class="cost-highlight">
+            <p>Namun dengan bergabungnya antum di Pondok Lumbung Qur'an, kami memberikan semua fasilitas dan program tersebut kepada antum dengan biaya bulanan hanya:</p>
+            <div class="amount">Rp700.000 / bulan</div>
+          </div>
+          <div class="cost-highlight gold">
+            <p>Bahkan kami menyediakan program Beasiswa Full sehingga seluruh fasilitas dan program pembelajaran bisa antum dapatkan hanya dengan:</p>
+            <div class="amount">Rp0 / bulan</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">
+          <span class="msi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l3-3M4 15l6-6M13 6l7 7-9 3-1-4-5-1 8-5Z" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Pilihan Jalur Pendaftaran
+        </div>
+        <div class="track-grid">
+          <div class="track-card">
+            <div class="track-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 4 2 10l10 6 10-6Z" stroke-linejoin="round"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" stroke-linejoin="round"/></svg>
+              Jalur Beasiswa
+            </div>
+            <div class="track-points">
+              <div><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Punya hafalan minimal 5 Juz Mutqin</div>
+              <div><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wajib Full Asrama</div>
+              <div><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wajib pengabdian 2 tahun</div>
+            </div>
+            <div class="track-fees">
+              <div class="track-fee-row"><span>Pendaftaran</span><span><span class="old-fee">Rp100.000</span>Rp0</span></div>
+              <div class="track-fee-row"><span>Daftar Ulang</span><span>Rp1.000.000</span></div>
+              <div class="track-fee-row spp"><span>SPP</span><span>Rp0 (Beasiswa Full)</span></div>
+            </div>
+            <button class="track-btn" onclick="openModalWithDelay(2)">Daftar Beasiswa</button>
+          </div>
+
+          <div class="track-card is-mandiri">
+            <div class="track-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 4 2 10l10 6 10-6Z" stroke-linejoin="round"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" stroke-linejoin="round"/></svg>
+              Jalur Mandiri
+            </div>
+            <div class="track-points">
+              <div><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Punya hafalan minimal 3 Juz</div>
+              <div><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wajib pengabdian 1 tahun</div>
+              <div><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Boleh sambil kuliah</div>
+            </div>
+            <div class="track-fees">
+              <div class="track-fee-row"><span>Pendaftaran</span><span>Rp100.000</span></div>
+              <div class="track-fee-row"><span>Daftar Ulang</span><span>Rp1.000.000</span></div>
+              <div class="track-fee-row spp"><span>SPP</span><span>Rp500.000 / bulan</span></div>
+            </div>
+            <button class="track-btn" onclick="openModalWithDelay(2)">Daftar Mandiri</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer-actions" style="justify-content:center; border-top:none; margin-top:20px;">
+        <button class="btn-batal" onclick="closeModal(2)">Batal, kembali</button>
+      </div>
+    </div>
+  </div>
+
+<div class="modal-overlay" id="modal-pakta" onclick="closeModalOnOverlay(event, 'pakta')">
+  <div class="modal-box">
+    <div class="modal-accent"></div>
+    <button class="modal-close" onclick="closeModal('pakta')" aria-label="Tutup">×</button>
+    <div class="modal-body">
+
+      <div style="text-align:center;">
+        <span class="pakta-pill">Gerbang #1: Pakta Integritas</span>
+      </div>
+      <h2 class="pakta-title">Komitmen Awal Calon<span class="hl">Mahasantri Pondok Lumbung Qur'an</span></h2>
+      <p class="pakta-sub">Sebelum melangkah lebih jauh, kami meminta kejujuran dan komitmen Anda sebagai pondasi utama.</p>
+
+      <div class="pakta-warning">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <strong>Peringatan Penting</strong>
+          <p>Kami tidak mentoleransi ketidakjujuran. Jika Anda ragu, mohon jangan lanjutkan pendaftaran ini demi kebaikan bersama.</p>
+        </div>
+      </div>
+
+      <div class="pakta-declare">Saya menyatakan dengan sadar bahwa:</div>
+      <div class="pakta-items">
+        <label class="pakta-item">
+          <input type="checkbox" onchange="checkPaktaComplete()">
+          <span class="pakta-check"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h4>Bebas Rokok</h4>
+            <p>Saya berkomitmen tidak merokok (termasuk vape/rokok elektrik) selama menjadi bagian dari Pondok Lumbung Qur'an.</p>
+          </div>
+        </label>
+        <label class="pakta-item">
+          <input type="checkbox" onchange="checkPaktaComplete()">
+          <span class="pakta-check"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h4>Tidak Berpacaran</h4>
+            <p>Saya berkomitmen untuk tidak menjalin hubungan pacaran selama menjadi santri.</p>
+          </div>
+        </label>
+        <label class="pakta-item">
+          <input type="checkbox" onchange="checkPaktaComplete()">
+          <span class="pakta-check"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h4>Siap Hidup Sehat</h4>
+            <p>Saya siap menjaga kesehatan dengan jalan/jogging minimal 5 km, minimal 5 kali seminggu.</p>
+          </div>
+        </label>
+        <label class="pakta-item">
+          <input type="checkbox" onchange="checkPaktaComplete()">
+          <span class="pakta-check"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h4>Siap Mengikuti Tata Tertib</h4>
+            <p>Saya siap mengikuti seluruh tata tertib yang berlaku di Pondok Lumbung Qur'an.</p>
+          </div>
+        </label>
+        <label class="pakta-item">
+          <input type="checkbox" onchange="checkPaktaComplete()">
+          <span class="pakta-check"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h4>Siap Tahajjud Jam 3 Pagi</h4>
+            <p>Saya siap bangun dan melaksanakan shalat tahajjud setiap jam 3 pagi.</p>
+          </div>
+        </label>
+        <label class="pakta-item">
+          <input type="checkbox" onchange="checkPaktaComplete()">
+          <span class="pakta-check"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h4>Siap Menyelesaikan Program</h4>
+            <p>Saya siap menyelesaikan seluruh program yang ada di Pondok Lumbung Qur'an.</p>
+          </div>
+        </label>
+        <label class="pakta-item">
+          <input type="checkbox" onchange="checkPaktaComplete()">
+          <span class="pakta-check"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h4>Siap Menjalankan Habit Santri</h4>
+            <p>Saya siap menjalankan habit santri Lumbung Qur'an: shalat tahajjud, tilawah 1 juz/hari, puasa Senin-Kamis, shalat dhuha, dan membaca buku.</p>
+          </div>
+        </label>
+        <label class="pakta-item">
+          <input type="checkbox" onchange="checkPaktaComplete()">
+          <span class="pakta-check"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h4>Siap Menerima Sanksi</h4>
+            <p>Jika melanggar poin-poin di atas, saya siap diberi sanksi.</p>
+          </div>
+        </label>
+        <label class="pakta-item">
+          <input type="checkbox" onchange="checkPaktaComplete()">
+          <span class="pakta-check"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h4>Komitmen Beasiswa &amp; Santri Karya</h4>
+            <p>Saya bersedia menyelesaikan Beasiswa Kuliah S1 dan menjadi Santri Karya.</p>
+          </div>
+        </label>
+        <label class="pakta-item">
+          <input type="checkbox" onchange="checkPaktaComplete()">
+          <span class="pakta-check"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5 6.5 12 13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <h4>Komitmen Penuh Menyelesaikan Program</h4>
+            <p>Jika keluar sebelum menyelesaikan Program Pondok Lumbung Qur'an, saya siap diberi penalti berupa pengembalian biaya sebesar Rp1.000.000/bulan.</p>
+          </div>
+        </label>
+      </div>
+
+      <button class="pakta-submit" id="paktaSubmitBtn" disabled onclick="proceedToPaktaForm()">
+        Lanjutkan Pendaftaran
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <p class="pakta-note">(Tombol hanya aktif jika semua poin integritas disepakati)</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Form Pendaftaran Online -->
+<div class="modal-overlay" id="modal-form-pendaftaran" onclick="if(event.target.id === this.id) closeModal('form-pendaftaran')">
+  <div class="modal-box" style="max-width: 500px;">
+    <div class="modal-accent"></div>
+    <button class="modal-close" onclick="closeModal('modal-form-pendaftaran')" aria-label="Tutup">×</button>
+    <div class="modal-body">
+      <span class="modal-category-pill"><span class="dot"></span>Form Pendaftaran Online</span>
+      <h2>Data Calon Santri</h2>
+      <p style="font-size: 14px; color: var(--ink-soft); margin-bottom: 20px;">Isi data diri Anda dengan lengkap dan benar</p>
+
+      <form id="form-pendaftaran-fields" onsubmit="return false;">
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--green-900);">Nama Lengkap *</label>
+          <input type="text" id="form-nama" placeholder="Contoh: Muhammad Ali" style="width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; font-family: inherit;">
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--green-900);">Umur *</label>
+          <input type="number" id="form-umur" placeholder="Contoh: 18" min="10" max="50" style="width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; font-family: inherit;">
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--green-900);">Email *</label>
+          <input type="email" id="form-email" placeholder="contoh@email.com" style="width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; font-family: inherit;">
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--green-900);">Nomor HP *</label>
+          <input type="tel" id="form-hp" placeholder="08xxxxxxxxxx" style="width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; font-family: inherit;">
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--green-900);">Asal Provinsi *</label>
+          <select id="form-provinsi" style="width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; font-family: inherit;">
+            <option value="">-- Pilih Provinsi --</option>
+            <option value="Aceh">Aceh</option>
+            <option value="Sumatera Utara">Sumatera Utara</option>
+            <option value="Sumatera Barat">Sumatera Barat</option>
+            <option value="Riau">Riau</option>
+            <option value="Jambi">Jambi</option>
+            <option value="Sumatera Selatan">Sumatera Selatan</option>
+            <option value="Lampung">Lampung</option>
+            <option value="Kalimantan Barat">Kalimantan Barat</option>
+            <option value="Kalimantan Tengah">Kalimantan Tengah</option>
+            <option value="Kalimantan Selatan">Kalimantan Selatan</option>
+            <option value="Kalimantan Timur">Kalimantan Timur</option>
+            <option value="Sulawesi Utara">Sulawesi Utara</option>
+            <option value="Sulawesi Tengah">Sulawesi Tengah</option>
+            <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+            <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+            <option value="Jawa Barat">Jawa Barat</option>
+            <option value="Jawa Tengah">Jawa Tengah</option>
+            <option value="Jawa Timur">Jawa Timur</option>
+            <option value="DI Yogyakarta">DI Yogyakarta</option>
+            <option value="Banten">Banten</option>
+            <option value="DKI Jakarta">DKI Jakarta</option>
+            <option value="Bali">Bali</option>
+            <option value="NTB">NTB</option>
+            <option value="NTT">NTT</option>
+            <option value="Papua Barat">Papua Barat</option>
+            <option value="Papua">Papua</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--green-900);">Jalur Pendaftaran *</label>
+          <select id="form-jalur" style="width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; font-family: inherit;">
+            <option value="">-- Pilih Jalur --</option>
+            <option value="Beasiswa">Jalur Beasiswa</option>
+            <option value="Mandiri">Jalur Mandiri</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--green-900);">Jumlah Hafalan (Juz) *</label>
+          <select id="form-hafalan" style="width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; font-family: inherit;">
+            <option value="">-- Pilih Jumlah --</option>
+            <option value="3">3 Juz</option>
+            <option value="5">5 Juz</option>
+            <option value="10">10 Juz</option>
+            <option value="15">15 Juz</option>
+            <option value="20">20 Juz</option>
+            <option value="30">30 Juz (Hafal Penuh)</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--green-900);">Nama Ayah *</label>
+          <input type="text" id="form-ayah" placeholder="Nama ayah kandung" style="width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; font-family: inherit;">
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--green-900);">Nama Ibu *</label>
+          <input type="text" id="form-ibu" placeholder="Nama ibu kandung" style="width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; font-family: inherit;">
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--green-900);">Hobi *</label>
+          <input type="text" id="form-hobi" placeholder="Contoh: Membaca, Olahraga, dll" style="width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; font-family: inherit;">
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--green-900);">Cita-cita *</label>
+          <input type="text" id="form-citacita" placeholder="Contoh: Hafidz yang berkontribusi, dll" style="width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; font-family: inherit;">
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--green-900);">Riwayat Penyakit (jika ada)</label>
+          <input type="text" id="form-penyakit" placeholder="Tulis 'Tidak ada' atau sebutkan penyakitnya" style="width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; font-family: inherit;">
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--green-900);">Lulusan dari SMA/SMK/Pondok mana? *</label>
+          <input type="text" id="form-lulusan" placeholder="Contoh: SMAN 1 Jakarta, atau Pondok Pesantren Darussalam" style="width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; font-family: inherit;">
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--green-900);">Alasan Mendasar Mendaftar di Pondok Lumbung Qur'an *</label>
+          <textarea id="form-alasan" placeholder="Jelaskan alasan Anda mendaftar di Pondok Lumbung Qur'an" style="width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; font-family: inherit; min-height: 80px; resize: vertical;"></textarea>
+        </div>
+
+        <div style="margin-top: 24px; display: flex; gap: 12px;">
+          <button type="button" class="btn-batal" onclick="closeModal('modal-form-pendaftaran')" style="flex: 1;">Batal</button>
+          <button type="button" id="form-submit-btn" onclick="submitPendaftaran()" class="track-btn" style="flex: 1; background: var(--green-500); color: white; padding: 12px; border-radius: 8px; font-weight: 600;">Kirim Pendaftaran</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Success Notification -->
+<div class="modal-success-overlay" id="modal-success-notification">
+  <div class="modal-success-box">
+    <div class="modal-success-top">
+      <div class="modal-success-icon">✓</div>
+      <h2 class="modal-success-title">Pendaftaran Berhasil!</h2>
+      <p class="modal-success-subtitle">Data Anda telah kami terima dengan baik</p>
+    </div>
+    <div class="modal-success-body">
+      <div class="modal-success-id">
+        <label>ID Pendaftaran</label>
+        <div class="id-text" id="success-id-text">-</div>
+      </div>
+      <p class="modal-success-message">
+        Terima kasih telah mendaftar di Pondok Lumbung Qur'an. Bergabunglah dengan grup WhatsApp kami untuk mendapatkan update terbaru mengenai proses pendaftaran Anda.
+      </p>
+      <a href="#" id="success-wa-link" class="modal-success-wa-btn" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.938 1.269 9.966 9.966 0 00-3.147 3.144 9.98 9.98 0 00-1.268 4.96c0 1.88.433 3.659 1.268 5.267l-1.348 4.924 5.048-1.324c1.536.835 3.276 1.275 5.124 1.275h.004c5.478 0 9.929-4.452 9.929-9.93 0-2.649-.619-5.14-1.819-7.426a9.965 9.965 0 00-3.144-3.144 9.967 9.967 0 00-7.862-1.451z"/>
+        </svg>
+        Bergabung di WhatsApp
+      </a>
+      <button class="modal-success-close-btn" onclick="closeSuccessModal()">Tutup Notifikasi</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    &copy; <span id="year"></span> Yayasan Baitul Qur'an — Pondok Lumbung Qur'an
+  </div>
+</footer>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Firebase Configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDDRyX8wGf-D5jSB0GBhp54R8kRIY7v3RA", // Ganti dengan API key Anda
+    projectId: "website-baitul-quran",
+    authDomain: "website-baitul-quran.firebaseapp.com",
+    storageBucket: "website-baitul-quran.firebasestorage.app",
+  };
+  
+  firebase.initializeApp(firebaseConfig);
+  var db = firebase.firestore();
+
+  function openModal(n){
+    var id = (String(n).indexOf('modal-') === 0) ? String(n) : 'modal-' + String(n);
+    var m = document.getElementById(id);
+    if(m){ m.classList.add('is-active'); document.body.style.overflow = 'hidden'; }
+  }
+
+  function openModalWithDelay(gelombangNum){
+    closeModal(gelombangNum);
+    setTimeout(function(){
+      openModal('pakta');
+    }, 50);
+  }
+  function closeModal(n){
+    var id = (String(n).indexOf('modal-') === 0) ? String(n) : 'modal-' + String(n);
+    var m = document.getElementById(id);
+    if(m){ m.classList.remove('is-active'); document.body.style.overflow = ''; }
+  }
+  function closeModalOnOverlay(e, n){
+    if(e.target.id === 'modal-' + n){ closeModal(n); }
+  }
+
+  function checkPaktaComplete(){
+    var boxes = document.querySelectorAll('#modal-pakta .pakta-item input[type=checkbox]');
+    var allChecked = Array.prototype.every.call(boxes, function(b){ return b.checked; });
+    document.getElementById('paktaSubmitBtn').disabled = !allChecked;
+  }
+  
+  function proceedToPaktaForm(){
+    closeModal('pakta');
+    openModal('modal-form-pendaftaran');
+  }
+  
+  // Form Pendaftaran Handler
+  function submitPendaftaran(){
+    var nama = document.getElementById('form-nama').value.trim();
+    var umur = document.getElementById('form-umur').value.trim();
+    var email = document.getElementById('form-email').value.trim();
+    var hp = document.getElementById('form-hp').value.trim();
+    var provinsi = document.getElementById('form-provinsi').value;
+    var jalur = document.getElementById('form-jalur').value;
+    var hafalan = document.getElementById('form-hafalan').value;
+    var ayah = document.getElementById('form-ayah').value.trim();
+    var ibu = document.getElementById('form-ibu').value.trim();
+    var hobi = document.getElementById('form-hobi').value.trim();
+    var citacita = document.getElementById('form-citacita').value.trim();
+    var penyakit = document.getElementById('form-penyakit').value.trim();
+    var lulusan = document.getElementById('form-lulusan').value.trim();
+    var alasan = document.getElementById('form-alasan').value.trim();
+    
+    // Validation
+    if(!nama || !umur || !email || !hp || !provinsi || !jalur || !hafalan || !ayah || !ibu || !hobi || !citacita || !lulusan || !alasan){
+      alert('Mohon lengkapi semua field yang wajib diisi (tandaan *)');
+      return;
+    }
+    
+    if(!email.includes('@')){
+      alert('Email tidak valid');
+      return;
+    }
+    
+    if(hp.length < 10){
+      alert('Nomor HP tidak valid');
+      return;
+    }
+    
+    var submitBtn = document.getElementById('form-submit-btn');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sedang mengirim...';
+    
+    // Submit to Firestore
+    db.collection('pendaftaran').add({
+      nama: nama,
+      umur: umur,
+      email: email,
+      hp: hp,
+      provinsi: provinsi,
+      jalur: jalur,
+      hafalan: hafalan,
+      ayah: ayah,
+      ibu: ibu,
+      hobi: hobi,
+      citacita: citacita,
+      penyakit: penyakit || 'Tidak ada',
+      lulusan: lulusan,
+      alasan: alasan,
+      createdAt: new Date(),
+      status: 'pending'
+    }).then(function(docRef){
+      // Show success modal dengan ID pendaftaran
+      showSuccessModal(docRef.id);
+      document.getElementById('form-pendaftaran-fields').reset();
+      closeModal('modal-form-pendaftaran');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Kirim Pendaftaran';
+    }).catch(function(error){
+      console.error('Error: ', error);
+      alert('Gagal mengirim pendaftaran. Silahkan coba lagi.');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Kirim Pendaftaran';
+    });
+  }
+
+  function showSuccessModal(registrationId){
+    document.getElementById('success-id-text').textContent = registrationId;
+    document.getElementById('success-wa-link').href = 'https://chat.whatsapp.com/JZMTQZiAimpGFJ6n9ie73b?s=sh&p=a&mlu=0&ilr=4';
+    document.getElementById('modal-success-notification').classList.add('is-active');
+  }
+
+  function closeSuccessModal(){
+    document.getElementById('modal-success-notification').classList.remove('is-active');
+  }
+  
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      document.querySelectorAll('.modal-overlay.is-active').forEach(function(m){
+        m.classList.remove('is-active');
+      });
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+
+</body>
+</html>
