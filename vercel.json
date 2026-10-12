@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "routes": [
+    { "src": "^/$", "has": [{ "type": "host", "value": { "inc": ["lumbungquran.com", "www.lumbungquran.com"] } }], "dest": "/kehidupan-pondok.html" },
+    { "src": "^/daftar$", "has": [{ "type": "host", "value": { "inc": ["lumbungquran.com", "www.lumbungquran.com"] } }], "dest": "/gelombang-pendaftaran.html" },
+    { "src": "^/daftar/$", "has": [{ "type": "host", "value": { "inc": ["lumbungquran.com", "www.lumbungquran.com"] } }], "status": 308, "headers": { "Location": "/daftar" } },
+    { "src": "^/kehidupan-pondok(\\.html)?$", "has": [{ "type": "host", "value": { "inc": ["lumbungquran.com", "www.lumbungquran.com"] } }], "status": 308, "headers": { "Location": "/" } },
+    { "src": "^/gelombang-pendaftaran(\\.html)?$", "has": [{ "type": "host", "value": { "inc": ["lumbungquran.com", "www.lumbungquran.com"] } }], "status": 308, "headers": { "Location": "/daftar" } },
+    { "src": "^/index\\.html$", "has": [{ "type": "host", "value": { "inc": ["lumbungquran.com", "www.lumbungquran.com"] } }], "status": 308, "headers": { "Location": "https://www.baitulquranbmc.my.id/" } },
+    { "src": "^/(kehidupan-rumah-quran\\.html|gelombang-syamil-madani\\.html|admin/.*)$", "has": [{ "type": "host", "value": { "inc": ["lumbungquran.com", "www.lumbungquran.com"] } }], "status": 308, "headers": { "Location": "https://www.baitulquranbmc.my.id/$1" } },
+
+    { "src": "^/kehidupan-pondok\\.html$", "has": [{ "type": "host", "value": { "inc": ["baitulquranbmc.my.id", "www.baitulquranbmc.my.id"] } }], "status": 308, "headers": { "Location": "https://www.lumbungquran.com/" } },
+    { "src": "^/gelombang-pendaftaran\\.html$", "has": [{ "type": "host", "value": { "inc": ["baitulquranbmc.my.id", "www.baitulquranbmc.my.id"] } }], "status": 308, "headers": { "Location": "https://www.lumbungquran.com/daftar" } }
+  ]
+}
