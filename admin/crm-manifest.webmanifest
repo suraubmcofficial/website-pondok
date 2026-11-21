@@ -1,0 +1,17 @@
+{
+  "name": "CRM Rekrutmen Santri — Pondok Lumbung Qur'an",
+  "short_name": "CRM LQ",
+  "description": "Pantau chat WhatsApp bot, pipeline calon santri, dan kuota pendaftaran Pondok Lumbung Qur'an.",
+  "lang": "id",
+  "start_url": "/admin/crm-rekrutmen.html",
+  "scope": "/admin/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F1F5F1",
+  "theme_color": "#0C4A2B",
+  "icons": [
+    { "src": "/admin/crm-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/admin/crm-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/admin/crm-icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
